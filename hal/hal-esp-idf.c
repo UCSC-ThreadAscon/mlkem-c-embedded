@@ -45,7 +45,7 @@ void hal_setup(const enum clock_mode clock) {
     REG_SET_BIT(RTC_CNTL_SWD_CONF_REG, RTC_CNTL_SWD_AUTO_FEED_EN);
     REG_WRITE(RTC_CNTL_SWD_WPROTECT_REG, 0);
 
-    cache_hal_init();
+    cache_hal_init(NULL);
     cache_hal_is_cache_enabled(CACHE_LL_ID_ALL, CACHE_TYPE_ALL);
 
     uart_ll_sclk_enable(UART_LL_GET_HW(UART_NUM_0));

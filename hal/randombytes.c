@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 #include "randombytes.h"
 
+#define RISCV 1
+
 #ifdef RISCV
 #include <esp_random.h>
 int randombytes(uint8_t *obuf, size_t len) {
