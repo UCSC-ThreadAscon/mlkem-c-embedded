@@ -4,6 +4,7 @@
 #include "hal.h"
 
 #include <string.h>
+#include <stdio.h>
 
 const uint8_t canary[8] = {
     0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF
@@ -141,6 +142,7 @@ static int test_invalid_ciphertext(void) {
 }
 
 int main(void) {
+    printf("Hello world!\n");
     hal_setup(CLOCK_FAST);
 
     // marker for automated testing
